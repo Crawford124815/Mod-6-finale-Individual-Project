@@ -16,10 +16,6 @@ ul {
     list-style-type: none;
 }
 
-header {
-    width: 100%;
-}
-
 .blue {
     color: #2A4494;
 }
@@ -34,7 +30,7 @@ header {
 }
 
 .click:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .click:active {
