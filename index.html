@@ -6,7 +6,7 @@
     <title>BingeBox</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="Browse.html">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/efcd89efa5.js"
       crossorigin="anonymous"
@@ -31,7 +31,7 @@
             </li>
             <li class="nav__link--list">
               <a
-                href="#" class="
+                href="Browse.html" class="
                 nav__link 
                 nav__link--effect 
                 nav__link--effect-purple
@@ -47,6 +47,15 @@
               >Contact
             </a>
             </li>
+           <li class="nav__link--list" onclick="toggleContrast()">
+            <a
+              href="#" class="
+                nav__link 
+                nav__link--effect 
+                click__effect"                       
+            ><i class="fas fa-adjust"></i>      
+            </a>
+          </li>
           </ul>
         </nav>
     </section>
@@ -60,7 +69,7 @@
         </div>
         <div class="input__wrapper">
           <input class="input__field" type="text" placeholder="Search by Title, Year, or Director">
-          <button class="btn__search">
+          <button class="btn__search click__effect">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>

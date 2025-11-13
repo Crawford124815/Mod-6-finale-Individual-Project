@@ -2,3 +2,15 @@
 // http://www.omdbapi.com/?apikey=dcc16eb4&
 // Poster API requests:
 // http://img.omdbapi.com/?apikey=dcc16eb4&
+
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+    document.body.classList += " dark-theme"
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+}
