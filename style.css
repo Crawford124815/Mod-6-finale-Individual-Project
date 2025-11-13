@@ -209,6 +209,8 @@ mix-blend-mode: multiply;
 
 */
 
+
+
 .content__wrapper {
     display: flex;
     flex-direction: column;
@@ -304,7 +306,6 @@ cubic-bezier(.645, .045, .355, 1);
   }
 
   .btn__search-2 {
-   
      width: 100%;
     max-width: 600px;
     position: relative;
@@ -348,29 +349,13 @@ cubic-bezier(.645, .045, .355, 1);
 }
 
 .overlay {
-  background-image: url(./assets/Search\ background.jpg);
-    background-repeat: no-repeat;
+  background: linear-gradient(rgb(96, 48, 177, 0.4),rgba(0, 0, 0, 0.5)),
+   url(./assets/Search\ background.jpg);
+  position: relative;
+  background-repeat: no-repeat;
     background-position: -60%;
     background-size: cover;
     background-attachment: fixed;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-}
-
-.overlay:after {
-  content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(50, 20, 60, .80);
-    pointer-events: none;
 }
 
 .search {
