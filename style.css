@@ -358,6 +358,9 @@ cubic-bezier(.645, .045, .355, 1);
     background-attachment: fixed;
 }
 
-.search {
-  height: 100vh;
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
 }
+

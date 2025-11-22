@@ -61,21 +61,27 @@
         </nav>
           <div class="search__title">Browse Our Movies</div>
              <div class="input__wrapper">
-               <input class="input__field" type="text" placeholder="Search by Title, Year, or Director">
+               <input class="input__field"
+                type="text" 
+                placeholder="Search by Title, Year, or Director"
+                onchange="searchChange(event)"
+                />
                <button class="btn__search">
             <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>   
         </div>
-    <section id="search__page" class="search__page">
+    <section class="search">
+      <h1>Search Result:
+        <span class="search__name"></span>
+      </h1>
       <div class="movies">
-        <div class="movie">
-          <img src="movie img" alt="">
-          <h2 class="movie__title">
-            movie title
-          </h2>
-        </div>
+ 
       </div>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
   </body>
 </html>

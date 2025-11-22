@@ -1,5 +1,5 @@
 // Send all data request to:
-// http://www.omdbapi.com/?apikey=dcc16eb4&
+// http://www.omdbapi.com/?apikey=dcc16eb4&s=
 // Poster API requests:
 // http://img.omdbapi.com/?apikey=dcc16eb4&
 
