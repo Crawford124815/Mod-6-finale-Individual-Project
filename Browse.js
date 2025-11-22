@@ -1,9 +1,15 @@
 const moviesWrapper = document.querySelector(".movies");
 const searchName = document.querySelector(".search__name");
-const parameters = new URLSearchParams(window.location.search)
+const inputfield = document.querySelector(".input__field")
 let searchValue = "";
 
-console.log(parameters.get("searchTerm"))
+const parameters = new URLSearchParams(window.location.search)
+const searchTermFromParams = parameters.get("searchTerm")
+
+if (searchTermFromParams) {
+  inputfield.value = searchTermFromParams
+  renderMovies(searchTermFromParams)
+}
 
 function changeSearchValue(event) {
   searchValue = event.target.value;
@@ -30,10 +36,15 @@ async function renderMovies() {
 
   const data = await response.json();
 
-  if (!data || typeof data === undefined) {
-    alert("Error fetching movie data. Please try again later.");
-    return
-  }
+ 
+  // if (!data || data.Response === 'False' || !Array.isArray(data.Search)) {
+  //   if (data && data.Error) {
+  //     alert(`Error fetching movie data: ${data.Error}`);
+  //   } else {
+  //     alert("No movies found or an error occurred. Please try a different search term.");
+  //   }
+  //   return;
+  // }
 
   const moviesArr = data.Search;
   console.log(moviesArr);

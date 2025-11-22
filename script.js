@@ -21,7 +21,7 @@ function setSearchTerm(event) {
 }
 
 function goToBrowseMovies() {
-    if (!searchTerm.length > 0) {
+    if (!searchTerm.length < 0) {
         return
     }
    const origin = window.location.origin;
