@@ -8,8 +8,15 @@ function searchChange(event) {
 
 async function renderMovies(searchTerm) {
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=dcc16eb4&s=${searchTerm}`
+    `http://www.omdbapi.com/?s=${searchTerm}&apikey=dcc16eb4`
   );
+  // if (!data.Search) {
+  //   moviesData.innerHTML = <p>No results found</p>;
+ 
+  //   console.log(moviesData)
+  // }
+
+  // const moviesData = data.Search
   const data = await response.json();
   const moviesArr = data.Search;
   console.log(moviesArr);
@@ -17,13 +24,15 @@ async function renderMovies(searchTerm) {
     .slice(0, 6)
     .map((movie) => {
       return `
-    <div class="movie>
-    <img src=${movie.Poster}/>  
-    <h2>${movie.Title}</h2>
-    <h3>${movie.Year}</h3>
-    <button>Learn More</button>
+    <div class="movie">
+    <img class="movie__title--img" src=${movie.Poster}/>  
+    <h2 class="movie__title">${movie.Title}</h2>
+    <h3 class="movie__year">${movie.Year}</h3>
+    <button class="learn__more--btn click__effect">Learn More</button>
     </div>  
     `;
-    })
-    .join("");
+  })
+  .join("");
+
 }
+
