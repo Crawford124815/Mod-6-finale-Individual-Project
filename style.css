@@ -297,6 +297,10 @@ cubic-bezier(.645, .045, .355, 1);
     width: 100%;
   }
 
+  .page-2__body {
+    background-color: #0a1f44;
+  }
+
   .search__nav {
     z-index: 5;
   }
@@ -361,8 +365,17 @@ cubic-bezier(.645, .045, .355, 1);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
+}
+
+.search__result {
+ padding: 24px 0 0 24px;
+  color: #fff;
+}
+
+.search__name {
+  opacity: 0.8;
 }
 
 .movies {
@@ -396,10 +409,12 @@ cubic-bezier(.645, .045, .355, 1);
   text-align: center;
   text-overflow: hidden;
   margin-bottom: 12px;
+  color: #fff;
 }
 
 .movie__year {
   margin-bottom: 12px;
+  color: #d4cccc;
 }
 
 .learn__more--btn {

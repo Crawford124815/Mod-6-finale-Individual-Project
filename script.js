@@ -4,6 +4,7 @@
 // http://img.omdbapi.com/?apikey=dcc16eb4&
 
 let contrastToggle = false;
+let searchTerm = "";
 
 function toggleContrast() {
     contrastToggle = !contrastToggle
@@ -13,4 +14,16 @@ function toggleContrast() {
     else {
         document.body.classList.remove("dark-theme")
     }
+}
+
+function setSearchTerm(event) {
+    searchTerm = event.target.value
+}
+
+function goToBrowseMovies() {
+    if (!searchTerm.length > 0) {
+        return
+    }
+   const origin = window.location.origin;
+   window.location.href =  `${origin}/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
 }

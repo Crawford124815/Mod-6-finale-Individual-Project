@@ -6,6 +6,7 @@
     <title>BingeBox</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="Browse.js" defer></script>
     <script
       src="https://kit.fontawesome.com/efcd89efa5.js"
       crossorigin="anonymous"
@@ -67,8 +68,13 @@
           </h2>
         </div>
         <div class="input__wrapper">
-          <input class="input__field" type="text" placeholder="Search by Title, Year, or Director">
-          <button class="btn__search click__effect">
+          <input class="input__field"
+          id="source__input"
+           type="text"
+            placeholder="Search by Title"
+            onchange="setSearchTerm(event)"
+            />
+          <button class="btn__search click__effect" onclick="goToBrowseMovies()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>

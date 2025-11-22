@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="page-2__body">
         <div id="search__nav--bar" class="overlay">  
        <nav class="search__nav">
           <div class="logo">
@@ -54,7 +54,7 @@
                 nav__link 
                 nav__link--effect 
                 click__effect"                       
-            ><i class="fas fa-adjust purple"></i>      
+            ><i class="fas fa-adjust"></i>      
             </a>
           </li>
           </ul>
@@ -63,16 +63,17 @@
              <div class="input__wrapper">
                <input class="input__field"
                 type="text" 
-                placeholder="Search by Title, Year, or Director"
-                onchange="searchChange(event)"
+                id="destination__input"
+                placeholder="Search by Title"
+                onchange="changeSearchValue(event)"
                 />
-               <button class="btn__search">
+               <button class="btn__search" onclick="renderMovies()">
             <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>   
         </div>
     <section class="search">
-      <h1>Search Result:
+      <h1 class="search__result">Search Result:
         <span class="search__name"></span>
       </h1>
       <div class="movies">
