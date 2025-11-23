@@ -25,10 +25,10 @@ function movieInfo() {
 }
 
 async function renderMovies() {
-  if (!searchValue.length > 0 && searchTermFromParams.length > 0) {
-    alert("Please enter a movie title");
-    return      
-  }
+  // if (!searchValue.length > 0 && searchTermFromParams.length > 0) {
+  //   alert("Please enter a movie title");
+  //     return   
+  // }
 
   const response = await fetch(
     `http://www.omdbapi.com/?s=${searchValue || searchTermFromParams}&apikey=dcc16eb4`
@@ -37,14 +37,14 @@ async function renderMovies() {
   const data = await response.json();
 
  
-  // if (!data || data.Response === 'False' || !Array.isArray(data.Search)) {
-  //   if (data && data.Error) {
-  //     alert(`Error fetching movie data: ${data.Error}`);
-  //   } else {
-  //     alert("No movies found or an error occurred. Please try a different search term.");
-  //   }
-  //   return;
-  // }
+  if (!data || data.Response === 'False' || !Array.isArray(data.Search)) {
+    if (data && data.Error) {
+      alert(`Error fetching movie data: ${data.Error}`)
+    } else {
+      alert("No movies found or an error occurred. Please try a different search term.");
+    }
+    return;
+  }
 
   const moviesArr = data.Search;
   console.log(moviesArr);

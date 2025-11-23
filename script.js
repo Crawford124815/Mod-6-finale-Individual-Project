@@ -21,9 +21,9 @@ function setSearchTerm(event) {
 }
 
 function goToBrowseMovies() {
-    if (!searchTerm.length < 0) {
+    if (!searchTerm.length > 0) {
         return
     }
    const origin = window.location.origin;
-   window.location.href =  `${origin}/Mod-6-finale-Individual-Project/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
+   window.location.href =  `${origin}/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
 }
