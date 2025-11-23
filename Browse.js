@@ -5,6 +5,8 @@ let searchValue = "";
 
 const parameters = new URLSearchParams(window.location.search)
 const searchTermFromParams = parameters.get("searchTerm")
+const menuToggle = document.getElementById('menu__toggle');
+const navMenu = document.getElementById('nav__menu');
 
 if (searchTermFromParams) {
   inputfield.value = searchTermFromParams
@@ -61,4 +63,9 @@ async function renderMovies() {
   .join("");
 
 }
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
 

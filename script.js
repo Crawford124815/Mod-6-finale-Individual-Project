@@ -3,6 +3,7 @@
 // Poster API requests:
 // http://img.omdbapi.com/?apikey=dcc16eb4&
 
+
 let contrastToggle = false;
 let searchTerm = "";
 
@@ -28,3 +29,6 @@ function goToBrowseMovies() {
    const origin = window.location.origin;
    window.location.href =  `${origin}/Mod-6-finale-Individual-Project/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
 }
+
+
+
