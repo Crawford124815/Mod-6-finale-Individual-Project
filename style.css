@@ -171,6 +171,16 @@ nav {
   transition: all 600ms ease-out;
 }
 
+.landing__title,
+.para,
+.section__sub-title,
+.nav__link,
+.fa-adjust,
+section,
+.movie__img {
+  transition: background-color 300ms ease;
+}
+
 /*
 
      THEME-MODE
@@ -187,6 +197,13 @@ nav {
 }
 .dark-theme section{
     background-color: #242424;
+}
+.dark-theme .section{
+  height: 100vh;
+    background-color: #242424;
+}
+.dark-theme .page-2__body {
+  background-color: #242424;
 }
 .dark-theme .input__field {
   background: #242424;
@@ -223,6 +240,7 @@ mix-blend-mode: multiply;
     width: 40vh;
     transform: rotate(-25deg);
     z-index: 2;
+    
 }
 
 .landing__title  {
@@ -252,18 +270,19 @@ mix-blend-mode: multiply;
 .input__field {
       background-color: #fff;
     border-radius: 20px;
-    border: 1px solid #0a1f44;
+    border: 2px solid #6030b1;
     color: #0a1f44;
     display: inline-block;
     height: 70px;
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color .2s 
-cubic-bezier(.645, .045, .355, 1);
+    transition: border-color 300ms 
+    cubic-bezier(.645, .045, .355, 1);
     width: 100%;
     font-size: 24px;
     padding-left: 25px;
+    transition: background-color 300ms ease;
 }
 
 .btn__search {
@@ -376,6 +395,11 @@ cubic-bezier(.645, .045, .355, 1);
 
 .search__name {
   opacity: 0.8;
+}
+
+.search {
+  height: 1400px;
+  transition: all 300ms ease;
 }
 
 .movies {

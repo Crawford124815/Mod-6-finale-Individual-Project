@@ -25,7 +25,7 @@ function movieInfo() {
 }
 
 async function renderMovies() {
-  if (!searchValue.length > 0) {
+  if (!searchTermFromParams.length > 0) {
     alert("Please enter a movie title");
     return      
   }
@@ -49,7 +49,7 @@ async function renderMovies() {
   const moviesArr = data.Search;
   console.log(moviesArr);
   moviesWrapper.innerHTML = moviesArr
-    .slice(0, 9)
+    .slice(0, 6)
     .map((movie) => {
       return `
     <div class="movie">
