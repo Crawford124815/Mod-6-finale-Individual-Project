@@ -22,6 +22,7 @@ function setSearchTerm(event) {
 
 function goToBrowseMovies() {
     if (!searchTerm.length > 0) {
+        alert("Please enter a valid movie title")
         return
     }
    const origin = window.location.origin;
