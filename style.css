@@ -223,6 +223,10 @@ section,
   background-color: #8742ff;
 }
 
+.ham__hide {
+  display: none;
+}
+
 /*
 
      THEME-MODE
@@ -538,6 +542,9 @@ section,
   .nav__menu.active {
     display: flex;
     align-items: center;
+  }
+  .ham__hide {
+    display: flex;
   }
   .nav__link {
     display: flex;
