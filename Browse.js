@@ -25,13 +25,13 @@ function movieInfo() {
 }
 
 async function renderMovies() {
-  if (!searchTermFromParams.length > 0) {
+  if (!searchValue.length > 0 && searchTermFromParams.length > 0) {
     alert("Please enter a movie title");
     return      
   }
 
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${searchValue}&apikey=dcc16eb4`
+    `http://www.omdbapi.com/?s=${searchValue || searchTermFromParams}&apikey=dcc16eb4`
   );
 
   const data = await response.json();
