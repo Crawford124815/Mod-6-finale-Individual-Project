@@ -13,12 +13,13 @@ if (searchTermFromParams) {
 
 function changeSearchValue(event) {
   searchValue = event.target.value;
-}
-
-function searchChange(event) {
-  renderMovies(event.target.value);
   searchName.innerHTML = event.target.value;
 }
+
+// function searchChange(event) {
+//   renderMovies(event.target.value);
+//   searchName.innerHTML = event.target.value;
+// }
 
 function movieInfo() {
   alert("More movie info coming soon!");
@@ -27,7 +28,7 @@ function movieInfo() {
 async function renderMovies() {
 
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${searchValue || searchTermFromParams}&apikey=dcc16eb4`
+    `https://www.omdbapi.com/?s=${searchValue || searchTermFromParams}&apikey=dcc16eb4`
   );
 
   const data = await response.json();
