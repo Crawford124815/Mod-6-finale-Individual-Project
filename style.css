@@ -429,8 +429,13 @@ section,
 }
 
 .search__result {
-  padding: 24px 0 0 24px;
   color: #fff;
+}
+
+.search__result--wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10%;
 }
 
 .search__name {

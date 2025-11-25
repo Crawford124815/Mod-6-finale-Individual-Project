@@ -29,8 +29,3 @@ function goToBrowseMovies() {
     sessionStorage.setItem('movieSearchTerm', searchTerm);
     window.location.href = 'Browse.html';
 }
-
-
-
-// const origin = window.location.origin;
-// window.location.href =  `${origin}/Mod-6-finale-Individual-Project/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
