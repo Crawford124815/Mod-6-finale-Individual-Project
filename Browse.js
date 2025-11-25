@@ -5,6 +5,7 @@ const inputfield = document.querySelector(".input__field");
 let searchValue = "";
 let moviesArr = []
 let displayMoviesArr = []
+let currentSortState = 'default'
 
 const parameters = new URLSearchParams(window.location.search);
 const searchTermFromParams = parameters.get("searchTerm");
@@ -44,9 +45,9 @@ async function renderMovies() {
       searchValue || searchTermFromParams || searchTermFromStorage
     }&apikey=dcc16eb4`
   );
-
+  
   const data = await response.json();
-
+  
   if (!data || data.Response === "False" || !Array.isArray(data.Search)) {
     if (data && data.Error) {
       alert(`Error fetching movie data: ${data.Error}`);
@@ -57,9 +58,9 @@ async function renderMovies() {
     }
     return;
   }
+  moviesArr = data.Search;
+  displayMoviesArr = moviesArr.slice(0, 6)
   displayMovies()
- moviesArr = data.Search;
- displayMoviesArr = moviesArr.slice(0, 6)
 }
 function displayMovies() {
   moviesWrapper.innerHTML = displayMoviesArr
@@ -77,9 +78,7 @@ function displayMovies() {
             `;
     })
     .join("");
-
 }
-  let currentSortState = 'default'
 
   function toggleSortOrder() {
     if (currentSortState === 'default') {
@@ -94,7 +93,7 @@ function displayMovies() {
 
     document.getElementById('sort__button').textContent = `Sort: ${currentSortState.toUpperCase()}`;
     sortMovies();
-    renderMovies();
+    displayMovies();
   }
   function sortMovies() {
   if (currentSortState === 'a-z') {
@@ -116,9 +115,6 @@ function displayMovies() {
   }
 
 }
-
-
-
 
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");

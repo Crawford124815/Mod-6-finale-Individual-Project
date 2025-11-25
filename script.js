@@ -3,29 +3,27 @@
 // Poster API requests:
 // http://img.omdbapi.com/?apikey=dcc16eb4&
 
-
 let contrastToggle = false;
 let searchTerm = "";
 
 function toggleContrast() {
-    contrastToggle = !contrastToggle
-    if (contrastToggle) {
-    document.body.classList += " dark-theme"
-    }
-    else {
-        document.body.classList.remove("dark-theme")
-    }
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
 }
 
 function setSearchTerm(event) {
-    searchTerm = event.target.value
+  searchTerm = event.target.value;
 }
 
 function goToBrowseMovies() {
-    if (!searchTerm.length > 0) {
-        alert("Please enter a valid movie title")
-        return
-    }
-    sessionStorage.setItem('movieSearchTerm', searchTerm);
-    window.location.href = 'Browse.html';
+  if (!searchTerm.length > 0) {
+    alert("Please enter a valid movie title");
+    return;
+  }
+  sessionStorage.setItem("movieSearchTerm", searchTerm);
+  window.location.href = "Browse.html";
 }
