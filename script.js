@@ -26,9 +26,11 @@ function goToBrowseMovies() {
         alert("Please enter a valid movie title")
         return
     }
-   const origin = window.location.origin;
-   window.location.href =  `${origin}/Mod-6-finale-Individual-Project/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
+    sessionStorage.setItem('movieSearchTerm', searchTerm);
+    window.location.href = 'Browse.html';
 }
 
 
 
+// const origin = window.location.origin;
+// window.location.href =  `${origin}/Mod-6-finale-Individual-Project/Browse.html?searchTerm=${encodeURIComponent(searchTerm)}`
